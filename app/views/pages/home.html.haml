@@ -1,0 +1,24 @@
+#calendar
+  %h3
+    = link_to 'Previous month', url_for(:date => calendar.previous.date)
+    |
+    = "#{calendar.month} #{calendar.date.year}"
+    |
+    = link_to 'Next month', url_for(:date => calendar.next.date)
+
+  %table
+    %thead
+      %tr
+        %th Sunday
+        %th Monday
+        %th Tuesday
+        %th Wednesday
+        %th Thursday
+        %th Friday
+        %th Saturday
+    %tbody
+      - calendar.weeks.each do |week|
+        %tr
+          - week.each do |day|
+            %td{:class => ('today' if day.today?)}
+              = day.number
