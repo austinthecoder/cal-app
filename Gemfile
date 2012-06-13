@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.5'
-gem "cal", "~> 0.3.0"
+gem "cal"
 gem "haml-rails", "~> 0.3.4"
 
 # Gems used only for assets and not required
