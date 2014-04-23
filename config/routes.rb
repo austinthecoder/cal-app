@@ -1,5 +1,5 @@
 CalApp::Application.routes.draw do
-  root :to => 'calendars#show'
+  root :to => redirect("/calendars/#{Date.today.year}-#{Date.today.month}")
 
   resources :calendars, :only => :show
 end
